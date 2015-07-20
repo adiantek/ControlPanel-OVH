@@ -1,6 +1,8 @@
 package ovh.adiantek.android.controlpanel_ovh;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.SimpleExpandableListAdapter;
 
@@ -15,7 +17,7 @@ import ovh.Api;
 /**
  * Web tab
  */
-public class Web extends ExpandableListView {
+public class Web extends ExpandableListView implements ExpandableListView.OnChildClickListener {
     private final Activity c;
     private ArrayList<TreeMap<String, String>> domainsList = new ArrayList<>();
     private ArrayList<TreeMap<String, String>> vpsList = new ArrayList<>();
@@ -58,11 +60,25 @@ public class Web extends ExpandableListView {
                     }
             }
         });
+        this.setOnChildClickListener(this);
     }
+
 
     private TreeMap<String, String> create(String a, String b) {
         TreeMap<String, String> map = new TreeMap<>();
         map.put(a, b);
         return map;
+    }
+
+
+    @Override
+    public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+        if (groupPosition == 1) {
+            String serviceName = vpsList.get(childPosition).get("CHILD_NAME");
+            Intent i = new Intent(c, Vps.class);
+            i.putExtra("serviceName", serviceName);
+            c.startActivity(i);
+        }
+        return false;
     }
 }

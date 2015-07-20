@@ -6,7 +6,7 @@
 	<string name="Controlpanel">Control panel</string>
 	<string name="Error">Error</string>
 	<string name="forgottenSuccess">Recovery email has been sent</string>
-	<string name="forgottenLoading">Checking …</string>
+	<string name="forgottenLoading">Checking…</string>
 	<string name="forgottenFailure">Unable to start recovery procedure</string>
 	<string name="AccountIDcannotbeempty">Account ID cannot be empty.</string>
 	<string name="Close">Close</string>
@@ -26,4 +26,11 @@
 
 	<string name="Domains">Domains</string>
 	<string name="Platform">Platform</string>
+	<string name="service">Service:</string>
+	<string name="Loading">Loading…</string>
+	<string name="retry">Retry</string>
+	<string name="cluster">Cluster:</string>
+	<string name="zone">Zone:</string>
+	<string name="sla">SLA Monitoring:</string>
+
 </resources>

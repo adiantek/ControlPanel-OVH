@@ -82,7 +82,8 @@ public class MyApi {
         return new String[]{title, info};
     }
 
-    public static void createThread(final Activity activity, final String method, final String path, final Object content, final RunnableResponse runnable) {
+    public static void createThread(final Activity activity, final String method, final String path, final Object content, final RunnableResponse runnable, final RunnableError onError) {
+
         new Thread(String.format("[%s] %s", method, path)) {
             private String title;
             private String info;
@@ -106,11 +107,7 @@ public class MyApi {
                     @Override
                     public void run() {
                         if (title != null) {
-                            AlertDialog.Builder adb = new AlertDialog.Builder(activity);
-                            adb.setTitle(title);
-                            adb.setMessage(info);
-                            adb.setPositiveButton(R.string.Close, null);
-                            adb.show();
+                            onError.run(activity, title, info);
                         } else
                             runnable.run(res);
                     }
@@ -119,7 +116,21 @@ public class MyApi {
         }.start();
     }
 
+    public static void createThread(final Activity activity, final String method, final String path, final Object content, final RunnableResponse runnable) {
+        createThread(activity, method, path, content, runnable, new RunnableError());
+    }
+
     public static abstract class RunnableResponse {
         public abstract void run(Api.Response response);
+    }
+
+    public static class RunnableError {
+        public void run(Activity activity, String title, String info) {
+            AlertDialog.Builder adb = new AlertDialog.Builder(activity);
+            adb.setTitle(title);
+            adb.setMessage(info);
+            adb.setPositiveButton(R.string.Close, null);
+            adb.show();
+        }
     }
 }

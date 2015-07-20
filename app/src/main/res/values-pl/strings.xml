@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Control panel - OVH</string>
+    <string name="Back">Powrót</string>
+    <string name="Close">Zamknij</string>
+    <string name="Error">Błąd</string>
+    <string name="ForgottenPassword">Zapomniałeś hasła?</string>
+    <string name="InvalidAccountIDorpassword">Niepoprawny identyfikator lub hasło</string>
+    <string name="Myaccount">Moje konto</string>
+    <string name="Password">Hasło</string>
+    <string name="forgottenLoading">Sprawdzanie…</string>
+    <string name="forgottenSuccess">Email został wysłany</string>
+    <string name="forgottenFailure">Nie można rozpocząć procedury odzyskiwania</string>
+    <string name="Platform">Platforma</string>
+    <string name="Domains">Domeny</string>
+    <string name="Cloud">Chmura</string>
+    <string name="Loading">Ładowanie…</string>
+    <string name="retry">Ponów probę</string>
+</resources>
