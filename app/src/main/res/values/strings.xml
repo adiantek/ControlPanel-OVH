@@ -1,6 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ControlPanel-OVH</string>
+	<!-- log in panel -->
+	<string name="AccountID">Account ID</string>
+	<string name="Password">Password</string>
+	<string name="Controlpanel">Control panel</string>
+	<string name="Error">Error</string>
+	<string name="forgottenSuccess">Recovery email has been sent</string>
+	<string name="forgottenLoading">Checking …</string>
+	<string name="forgottenFailure">Unable to start recovery procedure</string>
+	<string name="AccountIDcannotbeempty">Account ID cannot be empty.</string>
+	<string name="Close">Close</string>
+	<string name="Login">Login</string>
+	<string name="ForgottenPassword">Forgotten password?</string>
+	<string name="InvalidAccountIDorpassword">Invalid Account ID or password</string>
+	<string name="Back">Back</string>
+	<string name="Submit">Submit</string>
+	<string name="app_name">Control panel - OVH</string>
+	<string name="Web">Web</string>
+	<string name="Dedicated">Dedicated</string>
+	<string name="Cloud">Cloud</string>
+	<string name="Telecom">Telecom</string>
+	<string name="Billing">Billing</string>
+	<string name="Support">Support</string>
+	<string name="Myaccount">My account</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+	<string name="Domains">Domains</string>
+	<string name="Platform">Platform</string>
 </resources>
